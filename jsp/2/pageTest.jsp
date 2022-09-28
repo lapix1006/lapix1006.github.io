@@ -4,7 +4,7 @@
 <%@ page
 info = "Page Directive Test"
 import = "java.util.*"
-buffer = "5Kb"
+buffer = "5kb"
 autoFlush ="true"
 errorPage = "errorPage.jsp" %>
 <!DOCTYPE html>
