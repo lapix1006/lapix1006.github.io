@@ -1,0 +1,66 @@
+<!doctype  html>  <!-- userReg.html -->
+ <html><head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ 
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+ </script>
+ <style>
+ body {font-family: Verdana, sans=serif; font-size:0.8em;}
+ header, nav, section, article, footer
+ {boder:1px solid gray; margin:5px; padding:8px;}
+ nav ul {margin:0; padding:0;}
+ .id_form {width:100px; hegiht:14px; color:red;}
+ 
+ </style>
+ <title>로그인 실습</title>
+ </head>
+ <body>
+ <header>
+ <h2>실습을 환영합니다</h2></header>
+ <nav>
+ <ul>
+ <li> <a href="http:/localhost:8089/JSPWORK/login.html">로그인</a></li>
+	<li> <a href="http:/localhost:8089/JSPWORK/member.jsp">조회</a></li>
+ </ul>
+ </nav>
+ <section>
+ <form action="userReg.jsp" method="post">
+ <fieldset> <legend>회원 정보</legend>
+  <fieldset> <legend>이름/이메일</legend>
+ <label for="stud_name">이름</label>
+ <input class="id_form" type="text" name="stud_name" size="20" maxlength="50" required/>
+ <label for="stud_email">이메일</label>
+ <input class="id_form" type="text" name="stud_email" size="20" maxlength="50"/>
+<label for="stud_phone">전화번호</label>
+<input class="id_form" type="text" name="stud_phone" size="20" maxlength="50"/>
+ </fieldset>
+ <fieldset> <legend>성별</legend>
+ <label for="stud_name">여자</label>
+ <input class="id_form" type="radio" name="stud_gedner" value="여자" checked/>
+  <label for="stud_name">남자</label>
+  <input class="id_form" type="radio" name="stud_gedner" value="남자"/>
+ </fieldset>
+ 
+ <fieldset> <legend>취미</legend>
+ <label for="sutd_hobby1">낚시</label>
+ <input class="id_form" type="checkbox" name="stud_hobby1" value="낚시"/>
+  <label for="stud_hobby1">바둑</label>
+ <input class="id_form" type="checkbox" name="stud_hobby2" value="바둑"/>
+   <label for="stud_hobby1">독서</label>
+ <input class="id_form" type="checkbox" name="stud_hobby3" value="독서"/>
+
+ </fieldset>
+ <input type="submit" value="회원등록">
+ </fieldset>
+
+ 
+ </form>
+ </section>
+ <footer>
+ <p>&copy; 2022 Made by Korea. All rights reserved.</p>
+ </footer>
+ </body>
+</html>
+ 
+ 
