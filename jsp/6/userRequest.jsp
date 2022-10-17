@@ -15,6 +15,14 @@
  .id_form {width:100px; hegiht:14px; color:red;}
  </style>
  <title>로그인 실습</title>
+ <body>
+    <header>
+        <h2>실습을 환영합니다</h2>
+    </header>
+    <nav>
+        <ul><li><a href="www.dju.ac.kr"</li></ul>
+    </nav>
+ </body>
  
  
 </head>
