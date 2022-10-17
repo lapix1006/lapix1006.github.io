@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<% response.setHeader("Ceche-Control", "no-cache"; %>
+<% response.setHeader("Cache-Control", "no-cache"); %>
 <!DOCTYPE html> <!-- resRedirectA.jsp -->
 <html>
     <head>
@@ -10,6 +10,6 @@
 
     </head>
     <body>
-        현재 페이지는 res_redirectB.jsp 입니다. <br/>
+        지금 보여지는 페이지는 resRedirectB.jsp 입니다. <br/>
     </body>
 </html>
