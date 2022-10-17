@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<% response.setHeader("Ceche-Control", "no-cache"; %>
+<% response.setHeader("Cache-Control", "no-cache"); %>
 <!DOCTYPE html> <!-- userResponse.jsp -->
 <html>
     <head>
