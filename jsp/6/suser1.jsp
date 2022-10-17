@@ -23,9 +23,9 @@ if (!IsSessionOn((String)session.getAttribute("sid")) ||
 	}
     else{
         out.println("<p>환영합니다." +
-            (String)session.getAttribute("sid") + "님 = <a href=\"slogout.jsp\">로그아웃</a></p>")
+            (String)session.getAttribute("sid") + "님 - <a href=\"slogout.jsp\">로그아웃</a></p>");
             out.println("<p>두번째 페이지로 이동합니다." +
-                (String)session.getAttribute("sid") + "님 = <a href=\"suser2.jsp\">이동</a></p>")
+                (String)session.getAttribute("sid") + "님 - <a href=\"suser2.jsp\">이동</a></p>");
     }
     %>
 </body>
