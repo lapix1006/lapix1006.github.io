@@ -1,47 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
-<%!
-boolean IsSessionOn(String str)
-{
-if( (str == null) || str.equals("")) return false;
-return true;
-}
-%>
-<!doctype  html>  <!-- slogin2.jsp -->
-<html>
-<head>
+<!doctype  html>  <!-- slogin.jsp -->
+<html><head> <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta charset="utf-8">
-<title>로그인 처리</title>
+<title>세션 실습</title>
+<jsp:useBean id="dto" class="studpkg.StudDTOx" scope="session"/>
 </head>
 <body>
 <%
-if(!IsSessionOn(request.getParameter("user_id"))
-		|| !IsSessionOn(request.getParameter("user_password")))
-	{
-	out.println("<p> 정확히 입력하세요.</p>");
-	out.println("<p> <a href=\"slogin.html\">로그인하기</a></p>");
-	return;
-	}
-String userId = "admin";
-String userPassword = "admin";
-
-if (request.getParameter("user_id").equals(userId) &&
-		request.getParameter("user_password").equals(userPassword) )
-{
-	out.println("<p> 로그인 성공</p>");
-	out.println("<p> <a href=\"suser1.jsp\">회원 페이지1 </a></p>");
-	
-	session.setAttribute("sid", request.getParameter("user_id"));
-	session.setAttribute("spasswd", request.getParameter("user_password"));
-	
-	
-}
-else{
-	out.println("<p> 로그인 실패</p>");
-	out.println("<p> <a href=\"slogin.html\">로그인하기 </a></p>");
-	
-}
-	
+String stud_id = request.getParameter("stud_id"); String stud_passwd = request.getParameter("stud_passwd");
+if (stud_id.equals("admin") && stud_passwd.equals("1234")){
+	if(idCheck(stud_id,stud_passwd)){
+	%>
+	<jsp:setProperty name="dto" property="stud_id"/>
+	<jsp:setProperty name="dto" property="verified" value="true"/>
+	<h3>로그인 되었습니다.</h3>
+	<a href="./secure.jsp">회원전용 페이지로...</a> <!--  실제사용은 <jsp:foward page="./secure.jsp"/> 자동이동 -->
+	<%
+	} else {
+	%>
+	<h3>아이디 또는 패스워드가 정확하지 않습니다.</h3>
+	<a href="./sLogin.html">홈페이지로</a> <!--  실제사용은 <jsp:foward page="./slogin.html"/> 자동이동 -->
+	<%
+	} 
 	%>
 </body>
 </html>
